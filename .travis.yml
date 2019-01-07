@@ -6,6 +6,7 @@ env:
     - LD_PRELOAD=/lib/x86_64-linux-gnu/libSegFault.so
     - SEGFAULT_SIGNALS=all
     - PYPI_USER_NAME: chaostoolkit
+    - secure: "uTekUdEpG1MHsGWvi/V6iH42QK9VageubRVIcPmCQWr1+ll5wF8FTJ8Ks0MWymySZfUZNyNi1+fvMFljIJKgkz+Y3ODP817vlMQztHCzkBlfVsgJLdD3eXhRTkvZhm7VtYVij7iFmXY1PDfKEMwtnf9C73LbaUyksdYcDQ+2WPNfD87duJxdOLjImtlk6Hb3oqMbIZ4om/EWDC+Wf2DughRHWk9qWInWHQzX3QmRmny41+yBGIkO/HUVJnfayerFw8PDVQuyf96mLTU7SX5bc6lznZYXkNa0jDXNa4o5SHFIomagTn0/EDGl3tMFqbm5zz6GXb3cePuSgZTUkzrKo5Iv9ETyRQyRxLtbRXFUOwxMsMSbpqFi7U8tZO48BsgG89SGgJKqFhieitvFMxmaN3HbJ03xQeyc1s/TuTc3XauLEJjP5g0DIUQU7lmUj7UTA6OSOom0uCRbAF2S9vHBz5UvSM4CxhjA6mmkcEe4JUeisGvBOuzhdiXu5rvIXWYLxeKOxEJH0m3TOOQdIqdtAclXnunCouzx4Fut3ciMb9j3zmuQoCwIQmi7bml/todzDNq0jhvhoJeemaiFwcJszu4LnknYEZHSFT0P+m0Y0OSZkFNnhdu8GZlK0r1F/lE+qsCvcMMUukXuEfLOT4PI7+C6BffJjl7Q2XE/iSQqIRw="
 python:
   - "3.6"
   - "3.7-dev"
