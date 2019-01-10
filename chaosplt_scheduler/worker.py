@@ -78,16 +78,16 @@ class ChaosPlatformWorker:
         logger.info("Starting worker supervisors...")
         while self.running:
             for i, p in enumerate(self._processes[:]):
+                # exit fast
+                if not self.running:
+                    return
+
                 if not p.is_running() or p.status() == psutil.STATUS_ZOMBIE:
                     self._processes.remove(p)
                     logger.warning(
                         "Worker (PID {}) gone, starting a new one...".format(
                             p.pid))
                     self._start_worker(i)
-
-                # exit fast
-                if not self.running:
-                    return
 
             time.sleep(self.supervising_interval)
         logger.info("Worker supervisor is now terminated")
@@ -102,15 +102,19 @@ class ChaosPlatformWorker:
         name = self.worker_name
         if self.add_suffix:
             name = "{}-{}".format(name, uuid.uuid4().hex)
+
         args = [
             path,
             "--name", name,
-            "--queue", self.queue_name]
+            "--queue", self.queue_name
+        ]
 
         if self.log_level == "DEBUG":
             args.append("--verbose")
-        logger.debug("Executing: {}".format(" ".join(args)))
 
+        # notice, the current's process environment variables will be passed
+        # down to the child worker process
+        logger.debug("Executing: {}".format(" ".join(args)))
         p = Popen(
             args, stdout=None,
             stderr=None, shell=False, cwd=self.worker_directory)

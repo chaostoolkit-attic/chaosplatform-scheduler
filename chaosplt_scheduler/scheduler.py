@@ -125,7 +125,6 @@ def stop_scheduler(scheduler: ChaosPlatformScheduler):
 
 def initialize_scheduler_queue(config: Dict[str, Any]) \
                                -> ChaosPlatformScheduler:
-    print(config)
     queue_name = config["redis"].pop("queue")
     connection_params = config.get("redis")
     connection = Redis(**connection_params)
