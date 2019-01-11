@@ -52,6 +52,9 @@ setup(
     url='https://github.com/chaostoolkit/chaosplatform-scheduler',
     packages=find_packages(),
     include_package_data=True,
+    install_requires=install_require,
+    tests_require=test_require,
+    setup_requires=pytest_runner,
     zip_safe=False,
     python_requires='>=3.6.*',
     project_urls={

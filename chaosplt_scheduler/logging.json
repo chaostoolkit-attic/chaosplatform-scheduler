@@ -62,11 +62,6 @@
             "level": "INFO" ,
             "propagate": false
         },
-        "circus": {
-            "handlers": ["default"],
-            "level": "INFO" ,
-            "propagate": false
-        },
         "cherrypy.access": {
             "handlers": ["cherrypy_access"],
             "level": "INFO",
