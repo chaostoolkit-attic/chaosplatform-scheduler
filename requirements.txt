@@ -12,3 +12,4 @@ redis==3.0.1
 rq==0.13.0
 rq-scheduler==0.9
 psutil==5.4.8
+chaostoolkit-lib>=1.0.0rc1
