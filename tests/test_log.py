@@ -4,11 +4,7 @@ from logging import StreamHandler
 from typing import Any, Dict
 from unittest.mock import MagicMock
 
-from requestlogger import ApacheFormatter, WSGILogger
-
-from chaosplt_scheduler.log import clean_logger, configure_logger, \
-    http_requests_logger
-
+from chaosplt_scheduler.log import clean_logger, configure_logger
 
 def test_configure_logger_with_embedded_config(config: Dict[str, Any]):
     logger = logging.getLogger("chaosplatform")
@@ -63,9 +59,3 @@ def test_configure_logger_with_specific_config(config: Dict[str, Any]):
         assert h.level == logging.ERROR
     finally:
         clean_logger()
-
-
-def test_http_requests_logger():
-    app = MagicMock()
-    wsgi_logger = http_requests_logger(app)
-    assert isinstance(wsgi_logger, WSGILogger)
