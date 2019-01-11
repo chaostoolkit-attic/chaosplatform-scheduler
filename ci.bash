@@ -13,6 +13,7 @@ function build () {
 
 function run-test () {
     echo "Running the tests"
+    python setup.py develop
     python setup.py test
 }
 
