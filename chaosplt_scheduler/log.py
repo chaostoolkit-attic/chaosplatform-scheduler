@@ -1,13 +1,11 @@
 import logging
 import logging.config
-from logging import StreamHandler
 import pkgutil
 from typing import Any, Dict
 
 import simplejson as json
 
-__all__ = ["clean_logger", "configure_logger", "http_requests_logger"]
-
+__all__ = ["clean_logger", "configure_logger"]
 logger = logging.getLogger("chaosplatform")
 
 
