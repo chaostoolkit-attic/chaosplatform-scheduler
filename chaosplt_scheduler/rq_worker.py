@@ -1,8 +1,6 @@
 #!/usr/bin/env python
 import sys
 
-import chaoslib  # noqa
-import chaosk8s  # noqa
 import click
 from redis import Redis
 from redis.exceptions import ConnectionError
