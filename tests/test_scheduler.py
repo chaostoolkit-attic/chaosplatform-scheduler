@@ -11,13 +11,13 @@ from fixtures.jobs import count_words
 
 def test_create_scheduler_queue():
     queue = create_scheduler_queue(
-        "myqueue", FakeStrictRedis(singleton=False), is_async=False)
+        "myqueue", FakeStrictRedis(), is_async=False)
     assert queue is not None
 
 
 def test_create_scheduler(config: Dict[str, Any]):
     queue = create_scheduler_queue(
-        "myqueue", FakeStrictRedis(singleton=False), is_async=False)
+        "myqueue", FakeStrictRedis(), is_async=False)
     sched = create_scheduler(queue, config)
     assert sched is not None
 
@@ -28,7 +28,7 @@ def test_create_scheduler(config: Dict[str, Any]):
 
 def test_running_scheduler(config: Dict[str, Any]):
     queue = create_scheduler_queue(
-        "myqueue", FakeStrictRedis(singleton=False), is_async=False)
+        "myqueue", FakeStrictRedis(), is_async=False)
     sched = create_scheduler(queue, config)
     sched.interval = 1
     assert sched.running == False
