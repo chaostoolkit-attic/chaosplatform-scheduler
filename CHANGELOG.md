@@ -4,9 +4,9 @@
 
 [Unreleased]: https://github.com/chaostoolkit/chaosplatform-scheduler/compare/0.1.1...HEAD
 
-## [0.1.2][] - 2019-01-14
+## [0.2.0][] - 2019-01-14
 
-[0.1.2]: https://github.com/chaostoolkit/chaosplatform-scheduler/compare/0.1.2...0.2.0
+[0.2.0]: https://github.com/chaostoolkit/chaosplatform-scheduler/compare/0.1.1...0.2.0
 
 ### Changed
 
