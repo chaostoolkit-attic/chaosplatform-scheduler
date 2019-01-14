@@ -4,7 +4,6 @@ itsdangerous>=0.24
 cherrypy>=18.0.1
 dateparser>=0.7.0
 simplejson>=3.15.0
-python-dotenv>=0.9.1
 grpcio>=1.17.1
 chaosplatform-grpc>=0.1.0
 croniter>=0.3.26
